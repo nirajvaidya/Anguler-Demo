@@ -1,0 +1,11 @@
+<!-- <p>passes-data works! {{hero.name}} {{hero.age}}</p> -->
+
+<!-- <p>passes-data works! {{hero.name}} {{hero.age}}</p> -->
+
+<p>passes-data works!  </p>
+<div *ngFor="let pass of hero">
+        <h3>{{pass.name}}</h3>
+        <h3>{{pass.age}}</h3>
+
+    </div>
+    <button (click)="showData()">click</button>

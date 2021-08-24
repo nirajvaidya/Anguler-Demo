@@ -1,0 +1,50 @@
+<input type="text" (keyup)="getVal(box.value)" #box />
+
+<button (click)="getVal(box.value)">click</button>
+<h1>{{inputValue}}</h1>
+
+
+<input type="text" [disabled]="disableValue" [value]=name />
+
+<br>
+<button (click)="open()">cli</button> 
+
+<!-- *ngIf -->
+<h1 *ngIf="show==='yes'; then ifBlock else elseBlock">
+
+</h1>
+<ng-template #ifBlock>
+    <h1>if bloack</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>elseBlock bloack</h1>
+</ng-template>
+
+<!-- *ngSwitch -->
+<div [ngSwitch]="color">
+    <h2 style="color: red" *ngSwitchCase="'red'">eeee</h2>
+    <h2 style="color: green" *ngSwitchCase="'green'">eee</h2>
+    <h2 style="color: yellow" *ngSwitchCase="'yellow'">eeee</h2>
+    <h2 style="color: salmon" *ngSwitchCase="'salmon'">eeeee</h2>
+    <h2 style="color: slateblue" *ngSwitchDefault="'salmon'">eeeee</h2>
+</div>
+<!-- *ngFor -->
+<div>
+    <table border="1">
+        <tr>
+            <td>name</td>
+            <td>age</td>
+            <td>size</td>
+        </tr>
+        <tr *ngFor="let item of data">
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.size}}</td>
+        </tr>
+    </table>
+</div>
+
+<!-- style color-->
+
+<h1 [style.color]="err?'red':'green'">heading</h1>
+<button (click)="changeColor()">chnage</button>
